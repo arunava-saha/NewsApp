@@ -7,13 +7,13 @@ import "firebase/firestore";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCNA3kvJu27mK_fHQZkU6jPljuJOauokJE",
-  authDomain: "news-app-f1d12.firebaseapp.com",
-  projectId: "news-app-f1d12",
-  storageBucket: "news-app-f1d12.appspot.com",
-  messagingSenderId: "345984333343",
-  appId: "1:345984333343:web:7c6b4a299cb9b81cb6872a",
-  measurementId: "G-4Y6MRTYNJK",
+  apiKey: process.env.NEXT_PUBLIC_FirebaseApiKey,
+  authDomain: process.env.NEXT_PUBLIC_FirebaseAuthDomain,
+  projectId: process.env.NEXT_PUBLIC_FirebaseprojectId,
+  storageBucket: process.env.NEXT_PUBLIC_FirebasestorageBucket,
+  messagingSenderId: process.env.NEXT_PUBLIC_FirebasemessagingSenderId,
+  appId: process.env.NEXT_PUBLIC_FirebaseappId,
+  measurementId: process.env.NEXT_PUBLIC_FirebasemeasurementId,
 };
 
 // Initialize Firebase
