@@ -26,7 +26,7 @@ const page = () => {
             Welcome, {user.displayName} - you are logged in to your favourites
             page - a protected route.
           </p>
-          <Favorites />
+          {/* <Favorites /> */}
         </>
       ) : (
         <p className="">
