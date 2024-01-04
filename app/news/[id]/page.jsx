@@ -14,12 +14,7 @@ const Page = ({ params }) => {
   const fetchData = async (page) => {
     try {
       const res = await fetch(
-        `https://newsapi.org/v2/top-headlines?country=us&pageSize=4&page=${page}`,
-        {
-          headers: {
-            Authorization: `Bearer ${process.env.NEXT_PUBLIC_MyApiKey}`,
-          },
-        }
+        `https://newsapi.org/v2/top-headlines?country=us&pageSize=4&page=${page}&apikey=${process.env.NEXT_PUBLIC_MyApiKey}`
       );
       const result = await res.json();
       setData(result);
