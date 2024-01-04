@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -72,7 +73,7 @@ const page = ({ params }) => {
                   isGridView ? "h-[30rem]" : "w-full h-full"
                 } rounded overflow-hidden shadow-lg`}
               >
-                <img className="w-full" src={item.urlToImage} />
+                <Image className="w-full" src={item.urlToImage} />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">{item.title}</div>
                   <p

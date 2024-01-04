@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -63,7 +64,7 @@ const page = ({ params }) => {
                     {item.publishedAt}
                   </div>
                 </div>
-                <img className="w-full" src={item.urlToImage} />
+                <Image className="w-full" src={item.urlToImage} />
                 <div className="px-6 py-4">
                   <p className={`text-gray-100 text-base`}>
                     {item.description}
