@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const router = useRouter();
   const pageId = parseInt(params.id, 10) || 1;
 
@@ -23,7 +23,7 @@ const page = ({ params }) => {
       );
       const result = await res.json();
       setData(result);
-      // console.log(result);
+      console.log(result);
     } catch (error) {
       console.error("Error fetching data:", error);
     }
@@ -73,7 +73,7 @@ const page = ({ params }) => {
                   isGridView ? "h-[30rem]" : "w-full h-full"
                 } rounded overflow-hidden shadow-lg`}
               >
-                <Image className="w-full" src={item.urlToImage} />
+                <img className="w-full" src={item.urlToImage} />
                 <div className="px-6 py-4">
                   <div className="font-bold text-xl mb-2">{item.title}</div>
                   <p
@@ -116,4 +116,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;

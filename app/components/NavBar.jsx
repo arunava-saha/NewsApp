@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import { Redressed } from "next/font/google";
 import { UserAuth } from "../context/AuthContext";
+import Image from "next/image";
 const red = Redressed({ subsets: ["latin"], weight: ["400"] });
 
 export const NavBar = () => {

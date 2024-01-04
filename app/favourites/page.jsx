@@ -4,7 +4,7 @@ import { UserAuth } from "../context/AuthContext";
 import Spinner from "../components/Spinner.jsx";
 import Favorites from "../components/NewItems";
 
-const page = () => {
+const Page = () => {
   const { user } = UserAuth();
   const [loading, setLoading] = useState(true);
 
@@ -37,4 +37,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default Page;

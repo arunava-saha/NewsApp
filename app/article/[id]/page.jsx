@@ -4,7 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
-const page = ({ params }) => {
+const Page = ({ params }) => {
   const router = useRouter();
   const pageId = parseInt(params.id, 10) || 1;
   const [data, setData] = useState({ articles: [] });
@@ -64,7 +64,7 @@ const page = ({ params }) => {
                     {item.publishedAt}
                   </div>
                 </div>
-                <Image className="w-full" src={item.urlToImage} />
+                <img className="w-full" src={item.urlToImage} />
                 <div className="px-6 py-4">
                   <p className={`text-gray-100 text-base`}>
                     {item.description}
@@ -106,4 +106,4 @@ const page = ({ params }) => {
   );
 };
 
-export default page;
+export default Page;
